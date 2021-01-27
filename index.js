@@ -1,4 +1,4 @@
-// login Event handelar
+// login btn Event handler
 
 const loginBtn = document.getElementById("login");
 loginBtn.addEventListener("click", function(){
@@ -9,10 +9,17 @@ loginBtn.addEventListener("click", function(){
 })
 
 
-// deposite button Event handelar
+// deposit btn Event handle
 
-const depositeBtn = document.getElementById("addDeposite");
-depositeBtn.addEventListener("click", function(){
-    const depositeAmount = document.getElementById("depositeAmount").value;
-    const depositNumber = parseFloat("depositeAmount");
+const depositBtn = document.getElementById("addDeposit");
+depositBtn.addEventListener("click", function(){
+    const depositAmount = document.getElementById("depositAmount").value;
+     const depositNumber = parseFloat(depositAmount);
+     
+
+     const currentDeposit = document.getElementById("currentDeposit").innerText;
+     const currentDepositNumber = parseFloat(currentDeposit);
+     const totalDeposit =  depositNumber + currentDepositNumber;
+    
+     document.getElementById("currentDeposit").innerText = totalDeposit;
 })
